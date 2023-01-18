@@ -15,7 +15,7 @@ apt install mariadb-server -y
 # Instalando dependencias
 apt install php libapache2-mod-php php-{mysql,intl,curl,json,gd,xml,mbstring,zip} -y
 
-# Configurando databases
+# Configurando e criando databases
 mysql_secure_installation
 mysql -uroot -p'rootDBpass' -e "create database owncloud character set utf8mb4 collate utf8mb4_bin;"
 mysql -uroot -p'rootDBpass' -e "grant all privileges on owncloud.* to owncloud@localhost identified by 'owndbpass';"
