@@ -21,8 +21,13 @@ mysql -uroot -p'rootDBpass' -e "create database owncloud character set utf8mb4 c
 mysql -uroot -p'rootDBpass' -e "grant all privileges on owncloud.* to owncloud@localhost identified by 'owndbpass';"
 
 # Adicionando repositorios OwnCloud
-echo \ 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/server:/10/Debian_11/ /' \ > /etc/apt/sources.list.d/isv:ownCloud:server:10.list
-curl -fsSL \ https://download.opensuse.org/repositories/isv:ownCloud:server:10/Debian_11/Release.key \ | gpg --dearmor > /etc/apt/trusted.gpg.d/isv_ownCloud_server_10.gpg
+echo \
+'deb http://download.opensuse.org/repositories/isv:/ownCloud:/server:/10/Debian_11/ /' \
+> /etc/apt/sources.list.d/isv:ownCloud:server:10.list
+
+curl -fsSL \
+https://download.opensuse.org/repositories/isv:ownCloud:server:10/Debian_11/Release.key \
+| gpg --dearmor > /etc/apt/trusted.gpg.d/isv_ownCloud_server_10.gpg
 apt udpate -y
 
 # Instalando owncloud
