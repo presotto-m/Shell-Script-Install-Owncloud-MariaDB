@@ -28,7 +28,7 @@ echo \
 curl -fsSL \
 https://download.opensuse.org/repositories/isv:ownCloud:server:10/Debian_11/Release.key \
 | gpg --dearmor > /etc/apt/trusted.gpg.d/isv_ownCloud_server_10.gpg
-apt udpate -y
+apt update -y
 
 # Instalando owncloud
 apt install owncloud-complete-files -y
